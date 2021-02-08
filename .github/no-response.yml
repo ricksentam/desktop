@@ -4,6 +4,8 @@
 daysUntilClose: 14
 # Label requiring a response
 # TODO: also close `needs-reproduction` issues (blocked by https://github.com/probot/no-response/issues/11)
+needs-reproduction: false
+#closed 'needs-reproduction'
 responseRequiredLabel: more-information-needed
 # Comment to post when closing an issue due to lack of response.
 closeComment: >

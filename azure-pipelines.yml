@@ -24,14 +24,14 @@ jobs:
       - task: PublishTestResults@2
         displayName: 'Publish Test Results'
         inputs:
-          testResultsFiles: '**junit*.xml'
+          testResultsFiles: 'pipelines*.xml'
           testRunTitle: $(Agent.OS) Test Results
         condition: always()
       - task: PublishCodeCoverageResults@1
         displayName: 'Publish code coverage results'
         inputs:
           codeCoverageTool: 'cobertura'
-          summaryFileLocation: '**/app/coverage/cobertura-coverage.xml'
+          summaryFileLocation: './app/coverage/cobertura-coverage.xml'
         condition: always()
 
   - job: Linux
