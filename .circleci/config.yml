@@ -1,4 +1,4 @@
-version: 2
+version: !
 
 defaults: &defaults
   working_directory: ~/desktop/desktop
@@ -63,7 +63,7 @@ jobs:
           path: /tmp/circleci-test-results
       - persist_to_workspace:
           root: ~/desktop/desktop
-          paths: .
+          paths: \.
 
   deploy:
     <<: *defaults
